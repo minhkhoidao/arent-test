@@ -23,15 +23,67 @@ Arent Test
 ## 📁 Project Structure
 
 ```
-- src/
-  - adapters/
-  - assets/
-  - components/
-  - containers/
-  - layout/
-  - lib/
-  - pages/
-  - services/
+src/
+├── adapters/              # Data adapters and transformers
+│   ├── api/              # API data adapters
+│   └── dto/              # Data Transfer Objects
+│
+├── assets/               # Static assets
+│   ├── images/          # Image files
+│   └── styles/          # Global styles
+│
+├── components/          # Reusable UI components
+│   ├── common/         # Common components
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   └── Card/
+│   └── ui/            # UI specific components
+│       ├── Forms/
+│       └── Charts/
+│
+├── containers/         # Feature containers/modules
+│   ├── auth/          # Authentication related
+│   ├── health/        # Health tracking features
+│   └── dashboard/     # Dashboard features
+│
+├── layout/            # Layout components
+│   ├── main/         # Main layout wrapper
+│   ├── headers/      # Header components
+│   └── footers/      # Footer components
+│
+├── lib/              # Core library folder
+│   ├── config/       # Configuration files
+│   │   ├── api.config.ts
+│   │   └── app.config.ts
+│   ├── icons/        # Icon components and assets
+│   │   ├── common/
+│   │   └── index.ts
+│   ├── hooks/        # Custom React hooks
+│   │   ├── useAuth.ts
+│   │   ├── useForm.ts
+│   │   └── useApi.ts
+│   ├── types/        # TypeScript type definitions
+│   │   ├── api.types.ts
+│   │   ├── common.types.ts
+│   │   └── models.types.ts
+│   └── utils/        # Utility functions
+│       ├── formatters.ts
+│       ├── validators.ts
+│       └── helpers.ts
+│
+├── pages/            # Page components
+│   ├── Home/
+│   ├── Dashboard/
+│   ├── Profile/
+│   └── Settings/
+│
+└── services/         # Business logic and API calls
+    ├── auth/
+    ├── user/
+    └── health/
 ```
 
-## Installation
+## Run and Setup
+
+- npm install
+- npm run dev
