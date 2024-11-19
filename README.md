@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Arent Test
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Health care app helps users track their fitness progress
 
-## Expanding the ESLint configuration
+## Problem
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- The goal is to develop a straightforward yet feature-packed tracking app that provides users with clear, intuitive charts to monitor their progress, alongside a user-friendly and easily navigable interface.
 
-- Configure the top-level `parserOptions` property like this:
+- From a development perspective, the codebase should maintain a clean separation between the user interface (UI) and business logic. The project structure should follow best practices to ensure readability, maintainability, and scalability. Moreover, all libraries used must be simple, secure, and easy to integrate.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Technologies
+
+- [React](https://reactjs.org/) - UI Library
+- [TypeScript](https://www.typescriptlang.org/) - Programming Language
+- [Vite](https://vitejs.dev/) - Build Tool
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS Framework
+- [Recharts](https://recharts.org/) - Charting Library
+
+## 📁 Project Structure
+
+```
+- src/
+  - adapters/
+  - assets/
+  - components/
+  - containers/
+  - layout/
+  - lib/
+  - pages/
+  - services/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Installation
