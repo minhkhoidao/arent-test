@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Hiragino Kaku Gothic ProN";
+  src: url("../public/fonts/hiragino_kaku_gothic_pron_w3.otf")
+    format("truetype");
+}
+
+@layer base {
+  html {
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background-color: #ffffff;
+  }
+
+  /* Global Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #777777;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffcc21;
+    border-radius: 6px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffcc21 #777777;
+  }
+}
+
+@layer components {
+  /* Background Colors */
+  .bg-primary-300 {
+    @apply bg-[#FCD34D];
+  }
+  .bg-primary-400 {
+    @apply bg-[#FB923C];
+  }
+  .bg-primary-500 {
+    @apply bg-[#F97316];
+  }
+  .bg-secondary-300 {
+    @apply bg-[#A5F3FC];
+  }
+  .bg-gray-400 {
+    @apply bg-[#9CA3AF];
+  }
+  .bg-white-light {
+    @apply bg-white;
+  }
+  .bg-background-darker {
+    @apply bg-[#2E2E2E];
+  }
+  .bg-background-dark {
+    /* @apply bg-[#414141]; */
+  }
+  .bg-danger {
+    @apply bg-[#FF4141];
+  }
+  .bg-neutral-menu {
+    @apply bg-[#777777];
+  }
+  .bg-neutral-menu-hover {
+    @apply bg-[#666666];
+  }
+  .bg-gradient-primary {
+    @apply bg-gradient-to-b from-[#FCD34D] to-[#FB923C];
+  }
+
+  /* Text Colors */
+  .text-content-default {
+    @apply text-[#404040];
+  }
+  .text-content-dark {
+    @apply text-[#1F2937];
+  }
+  .text-primary-300 {
+    @apply text-[#FCD34D];
+  }
+  .text-primary-400 {
+    @apply text-[#FB923C];
+  }
+  .text-primary-500 {
+    @apply text-[#F97316];
+  }
+  .text-secondary-300 {
+    @apply text-[#A5F3FC];
+  }
+  .text-neutral-white {
+    @apply text-white;
+  }
+  .text-neutral-light {
+    @apply text-[#F3F4F6];
+  }
+  .text-neutral-main {
+    @apply text-[#9CA3AF];
+  }
+  .text-neutral-dark {
+    @apply text-[#404040];
+  }
+  .text-neutral-darker {
+    @apply text-[#1F2937];
+  }
+  .text-danger {
+    @apply text-[#FF4141];
+  }
+
+  /* Border Colors */
+  .border-primary-300 {
+    @apply border-[#FCD34D];
+  }
+  .border-primary-400 {
+    @apply border-[#FB923C];
+  }
+  .border-primary-500 {
+    @apply border-[#F97316];
+  }
+  .border-secondary-300 {
+    @apply border-[#A5F3FC];
+  }
+  .border-gray-400 {
+    @apply border-[#9CA3AF];
+  }
+  .border-danger {
+    @apply border-[#FF4141];
+  }
+  .border-neutral-menu {
+    @apply border-[#666666];
+  }
+
+  /* Common Button Styles */
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-400 text-white-light hover:bg-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-300 text-content-dark hover:bg-opacity-80;
+  }
+
+  .btn-outline {
+    @apply btn border border-gray-400 text-content-default hover:bg-gray-400 hover:bg-opacity-10;
+  }
+
+  /* Common Container Styles */
+  .container-primary {
+    @apply bg-primary-300 text-content-dark p-4 rounded-lg;
+  }
+
+  .container-secondary {
+    @apply bg-secondary-300 text-content-dark p-4 rounded-lg;
+  }
+
+  .main-container {
+    @apply w-[80vw] px-1 md:px-4 mx-auto;
+  }
+}
+
+@layer utilities {
+  .scroll-mt-16 {
+    scroll-margin-top: 4rem; /* 64px */
+  }
+}
