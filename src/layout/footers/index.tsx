@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils/cn'
 import { FC } from 'react'
 
 const FOOTER_LINKS = [
-    { label: '会員登録', href: '/register' },
-    { label: '運営会社', href: '/company' },
-    { label: '利用規約', href: '/terms' },
-    { label: '個人情報の取扱について', href: '/privacy' },
-    { label: '特定商取引法に基づく表記', href: '/legal' },
-    { label: 'お問い合わせ', href: '/contact' }
+    { label: '会員登録', href: '#' },
+    { label: '運営会社', href: '#' },
+    { label: '利用規約', href: '#' },
+    { label: '個人情報の取扱について', href: '#' },
+    { label: '特定商取引法に基づく表記', href: '#' },
+    { label: 'お問い合わせ', href: '#' }
 ]
 
 type FooterLinkProps = {
@@ -47,7 +47,7 @@ const Footer: FC = () => {
             )}>
                 {FOOTER_LINKS.map((link) => (
                     <FooterLink
-                        key={link.href}
+                        key={link.label}
                         label={link.label}
                         href={link.href}
                     />
